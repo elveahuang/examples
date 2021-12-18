@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.elvea.repo</groupId>
+    <artifactId>spring-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <!-- repository -->
+    <repositories>
+        <repository><!-- aliyun -->
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository><!-- official -->
+            <id>official</id>
+            <url>https://central.maven.org/maven2</url>
+        </repository>
+        <repository><!-- spring-release -->
+            <id>spring-release</id>
+            <url>https://repo.spring.io/release</url>
+        </repository>
+        <repository><!-- spring-milestone -->
+            <id>spring-milestone</id>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository><!-- aliyun -->
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+        <pluginRepository><!-- official -->
+            <id>official</id>
+            <url>https://central.maven.org/maven2</url>
+        </pluginRepository>
+        <pluginRepository><!-- spring-release -->
+            <id>spring-release</id>
+            <url>https://repo.spring.io/release</url>
+        </pluginRepository>
+        <pluginRepository><!-- spring-milestone -->
+            <id>spring-milestone</id>
+            <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <!-- project -->
+        <project.source>17</project.source>
+        <project.target>17</project.target>
+        <project.encoding>UTF-8</project.encoding>
+        <project.build.version>1.0.0</project.build.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- spring -->
+        <spring.version>6.0.0-M1</spring.version>
+        <!-- -->
+        <jakarta-platform.version>9.1.0</jakarta-platform.version>
+        <slf4j.version>1.7.32</slf4j.version>
+        <log4j.version>2.16.0</log4j.version>
+        <lombok.version>1.18.22</lombok.version>
+        <jetty.version>10.0.7</jetty.version>
+        <asm.version>9.2</asm.version>
+        <!-- maven -->
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
+        <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
+        <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency><!-- spring-framework -->
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- jakarta -->
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-bom</artifactId>
+                <version>${jakarta-platform.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- log4j -->
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId>
+                <version>${log4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- slf4j -->
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency><!-- asm -->
+                <groupId>org.ow2.asm</groupId>
+                <artifactId>asm</artifactId>
+                <version>${asm.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin><!-- maven-compiler-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                    <configuration>
+                        <source>${project.source}</source>
+                        <target>${project.target}</target>
+                        <encoding>${project.encoding}</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin><!-- maven-war-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven-war-plugin.version}</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+
+                <plugin><!-- lombok-maven-plugin -->
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok-maven-plugin</artifactId>
+                    <version>${lombok-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>jetty</id>
+            <build>
+                <plugins>
+                    <plugin><!-- jetty-maven-plugin -->
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-maven-plugin</artifactId>
+                        <version>${jetty-maven-plugin.version}</version>
+                    </plugin>
+                    <plugin><!-- cargo-maven3-plugin -->
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <configuration>
+                            <container>
+                                <containerId>jetty11x</containerId>
+                                <type>embedded</type>
+                                <artifactInstaller>
+                                    <groupId>org.eclipse.jetty</groupId>
+                                    <artifactId>jetty-home</artifactId>
+                                    <version>${jetty.version}</version>
+                                </artifactInstaller>
+                            </container>
+                            <deployables>
+                                <deployable>
+                                    <properties>
+                                        <context>/</context>
+                                    </properties>
+                                </deployable>
+                            </deployables>
+                        </configuration>
+                        <dependencies>
+                            <dependency><!-- asm -->
+                                <groupId>org.ow2.asm</groupId>
+                                <artifactId>asm</artifactId>
+                                <version>${asm.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>tomcat</id>
+            <build>
+                <plugins>
+                    <plugin><!-- cargo-maven3-plugin -->
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <configuration>
+                            <container>
+                                <containerId>tomcat10x</containerId>
+                                <type>embedded</type>
+                            </container>
+                            <deployables>
+                                <deployable>
+                                    <properties>
+                                        <context>/</context>
+                                    </properties>
+                                </deployable>
+                            </deployables>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
