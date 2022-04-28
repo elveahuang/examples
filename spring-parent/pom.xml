@@ -54,27 +54,22 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring.version>6.0.0-M1</spring.version>
+        <spring-boot.version>3.0.0-M2</spring-boot.version>
         <!-- -->
         <jakarta-platform.version>9.1.0</jakarta-platform.version>
-        <slf4j.version>1.7.32</slf4j.version>
-        <log4j.version>2.16.0</log4j.version>
-        <lombok.version>1.18.22</lombok.version>
-        <jetty.version>10.0.7</jetty.version>
-        <asm.version>9.2</asm.version>
+        <lombok.version>1.18.24</lombok.version>
+        <asm.version>9.3</asm.version>
         <!-- maven -->
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-war-plugin.version>3.3.1</maven-war-plugin.version>
-        <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency><!-- spring-framework -->
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
+            <dependency><!-- spring-boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -85,19 +80,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency><!-- log4j -->
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-bom</artifactId>
-                <version>${log4j.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency><!-- slf4j -->
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
+            <dependency><!-- lombok -->
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
@@ -131,91 +114,23 @@
                         <encoding>${project.encoding}</encoding>
                     </configuration>
                 </plugin>
-
-                <plugin><!-- maven-war-plugin -->
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven-war-plugin.version}</version>
-                    <configuration>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-                </plugin>
-
                 <plugin><!-- lombok-maven-plugin -->
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-maven-plugin</artifactId>
                     <version>${lombok-maven-plugin.version}</version>
                 </plugin>
+                <plugin><!-- spring-boot-maven-plugin -->
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin><!-- spring-boot-maven-plugin -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>jetty</id>
-            <build>
-                <plugins>
-                    <plugin><!-- jetty-maven-plugin -->
-                        <groupId>org.eclipse.jetty</groupId>
-                        <artifactId>jetty-maven-plugin</artifactId>
-                        <version>${jetty-maven-plugin.version}</version>
-                    </plugin>
-                    <plugin><!-- cargo-maven3-plugin -->
-                        <groupId>org.codehaus.cargo</groupId>
-                        <artifactId>cargo-maven3-plugin</artifactId>
-                        <configuration>
-                            <container>
-                                <containerId>jetty11x</containerId>
-                                <type>embedded</type>
-                                <artifactInstaller>
-                                    <groupId>org.eclipse.jetty</groupId>
-                                    <artifactId>jetty-home</artifactId>
-                                    <version>${jetty.version}</version>
-                                </artifactInstaller>
-                            </container>
-                            <deployables>
-                                <deployable>
-                                    <properties>
-                                        <context>/</context>
-                                    </properties>
-                                </deployable>
-                            </deployables>
-                        </configuration>
-                        <dependencies>
-                            <dependency><!-- asm -->
-                                <groupId>org.ow2.asm</groupId>
-                                <artifactId>asm</artifactId>
-                                <version>${asm.version}</version>
-                            </dependency>
-                        </dependencies>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>tomcat</id>
-            <build>
-                <plugins>
-                    <plugin><!-- cargo-maven3-plugin -->
-                        <groupId>org.codehaus.cargo</groupId>
-                        <artifactId>cargo-maven3-plugin</artifactId>
-                        <configuration>
-                            <container>
-                                <containerId>tomcat10x</containerId>
-                                <type>embedded</type>
-                            </container>
-                            <deployables>
-                                <deployable>
-                                    <properties>
-                                        <context>/</context>
-                                    </properties>
-                                </deployable>
-                            </deployables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

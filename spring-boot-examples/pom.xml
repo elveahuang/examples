@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.elvea.repo</groupId>
-    <artifactId>spring-framework-examples</artifactId>
+    <artifactId>spring-boot-examples</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-mvc-example</module>
+        <module>spring-boot-base-example</module>
     </modules>
 </project>

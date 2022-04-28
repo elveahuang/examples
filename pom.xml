@@ -10,6 +10,6 @@
 
     <modules>
         <module>spring-parent</module>
-        <module>spring-framework-examples</module>
+        <module>spring-boot-examples</module>
     </modules>
 </project>
