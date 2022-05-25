@@ -54,7 +54,7 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.0.0-M2</spring-boot.version>
+        <spring-boot.version>3.0.0-M3</spring-boot.version>
         <!-- -->
         <jakarta-platform.version>9.1.0</jakarta-platform.version>
         <lombok.version>1.18.24</lombok.version>
