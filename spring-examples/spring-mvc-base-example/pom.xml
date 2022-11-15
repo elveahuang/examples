@@ -9,15 +9,25 @@
         <version>1.0.0</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
-    <artifactId>spring-boot-base-example</artifactId>
-    <description>Spring Boot Example</description>
+    <artifactId>spring-mvc-base-example</artifactId>
+    <description>Spring MVC Base Example</description>
     <version>1.0.0</version>
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+        <dependency><!-- asm -->
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin><!-- jetty-maven-plugin -->
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -7,11 +7,7 @@
     <artifactId>spring-examples</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <modules>
-        <module>parent</module>
-        <module>jakarta-examples</module>
-        <module>spring-examples</module>
-        <module>spring-boot-examples</module>
+        <module>spring-mvc-base-example</module>
     </modules>
 </project>

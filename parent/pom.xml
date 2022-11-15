@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cn.elvea.repo</groupId>
-    <artifactId>spring-parent</artifactId>
+    <artifactId>parent</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
@@ -54,16 +54,19 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.0.0-M4</spring-boot.version>
-        <spring-boot-admin.version>3.0.0-M4</spring-boot-admin.version>
-        <spring-cloud.version>2022.0.0-M4</spring-cloud.version>
+        <spring-boot.version>3.0.0-RC1</spring-boot.version>
+        <spring-boot-admin.version>3.0.0-M5</spring-boot-admin.version>
+        <spring-cloud.version>2022.0.0-M5</spring-cloud.version>
         <!-- -->
         <jakarta-platform.version>9.1.0</jakarta-platform.version>
         <lombok.version>1.18.24</lombok.version>
-        <asm.version>9.3</asm.version>
+        <asm.version>9.4</asm.version>
+        <!-- server -->
+        <jetty.version>11.0.12</jetty.version>
         <!-- maven -->
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+        <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -139,6 +142,11 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                </plugin>
+                <plugin><!-- jetty-maven-plugin -->
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>${jetty-maven-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
