@@ -9,5 +9,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-boot-base-example</module>
+        <module>spring-boot-thymeleaf-example</module>
     </modules>
 </project>

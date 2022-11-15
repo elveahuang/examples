@@ -9,5 +9,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-mvc-base-example</module>
+        <module>spring-mvc-jsp-example</module>
     </modules>
 </project>
