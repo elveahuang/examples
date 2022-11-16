@@ -33,6 +33,10 @@
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
             </plugin>
+            <plugin><!-- cargo-maven-plugin -->
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven3-plugin</artifactId>
+            </plugin>
         </plugins>
     </build>
 </project>
