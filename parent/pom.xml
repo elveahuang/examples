@@ -54,18 +54,18 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring.version>6.0.0</spring.version>
-        <spring-boot.version>3.0.0-RC1</spring-boot.version>
-        <spring-data.version>2022.0.0-RC2</spring-data.version>
-        <spring-cloud.version>2022.0.0-M5</spring-cloud.version>
-        <spring-security.version>6.0.0-RC2</spring-security.version>
-        <spring-boot-admin.version>3.0.0-M5</spring-boot-admin.version>
-        <!-- -->
-        <jakarta-platform.version>9.1.0</jakarta-platform.version>
+        <spring.version>6.0.3</spring.version>
+        <spring-boot.version>3.0.1</spring-boot.version>
+        <spring-data.version>2022.0.0</spring-data.version>
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <spring-security.version>6.0.1</spring-security.version>
+        <spring-boot-admin.version>3.0.0-M6</spring-boot-admin.version>
+        <!-- 3rd party -->
+        <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <lombok.version>1.18.24</lombok.version>
         <asm.version>9.4</asm.version>
         <!-- server -->
-        <jetty.version>11.0.12</jetty.version>
+        <jetty.version>11.0.13</jetty.version>
         <!-- maven -->
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
