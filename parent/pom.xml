@@ -54,12 +54,9 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring.version>6.0.3</spring.version>
-        <spring-boot.version>3.0.1</spring-boot.version>
-        <spring-data.version>2022.0.0</spring-data.version>
-        <spring-cloud.version>2022.0.0</spring-cloud.version>
-        <spring-security.version>6.0.1</spring-security.version>
-        <spring-boot-admin.version>3.0.0-M6</spring-boot-admin.version>
+        <spring-boot.version>3.0.2</spring-boot.version>
+        <spring-cloud.version>2022.0.1</spring-cloud.version>
+        <spring-boot-admin.version>3.0.0</spring-boot-admin.version>
         <!-- 3rd party -->
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <lombok.version>1.18.24</lombok.version>
@@ -76,27 +73,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency><!-- spring -->
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency><!-- spring-security -->
-                <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-bom</artifactId>
-                <version>${spring-security.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency><!-- spring-data -->
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-bom</artifactId>
-                <version>${spring-data.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency><!-- spring-boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
