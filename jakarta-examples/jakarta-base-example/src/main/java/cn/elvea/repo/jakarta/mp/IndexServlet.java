@@ -1,4 +1,4 @@
-package cn.elvea.repo.jakarta.web;
+package cn.elvea.repo.jakarta.mp;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
