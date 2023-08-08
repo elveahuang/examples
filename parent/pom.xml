@@ -54,23 +54,22 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.0.6</spring-boot.version>
-        <spring-cloud.version>2022.0.2</spring-cloud.version>
-        <spring-boot-admin.version>3.0.2</spring-boot-admin.version>
+        <spring-boot.version>3.1.2</spring-boot.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
+        <spring-boot-admin.version>3.1.4</spring-boot-admin.version>
         <!-- 3rd party -->
-        <jakarta-platform.version>10.0.0</jakarta-platform.version>
-        <lombok.version>1.18.26</lombok.version>
         <asm.version>9.5</asm.version>
+        <lombok.version>1.18.28</lombok.version>
+        <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
         <jetty.version>11.0.15</jetty.version>
-        <payara.version>6.2023.4</payara.version>
+        <payara.version>6.2023.7</payara.version>
         <!-- maven -->
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+        <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <payara-maven-plugin.version>2.0</payara-maven-plugin.version>
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
-        <cargo-maven-plugin.version>1.10.3</cargo-maven-plugin.version>
-        <payara-maven-plugin.version>1.4.0</payara-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -159,6 +158,11 @@
                     <groupId>org.eclipse.jetty</groupId>
                     <artifactId>jetty-maven-plugin</artifactId>
                     <version>${jetty-maven-plugin.version}</version>
+                    <configuration>
+                        <webApp>
+                            <contextPath>/</contextPath>
+                        </webApp>
+                    </configuration>
                 </plugin>
                 <plugin><!-- payara-micro-maven-plugin -->
                     <groupId>fish.payara.maven.plugins</groupId>
@@ -168,15 +172,14 @@
                         <payaraVersion>${payara.version}</payaraVersion>
                     </configuration>
                 </plugin>
-                <plugin><!-- cargo-maven-plugin -->
-                    <groupId>org.codehaus.cargo</groupId>
-                    <artifactId>cargo-maven3-plugin</artifactId>
-                    <version>${cargo-maven-plugin.version}</version>
-                </plugin>
             </plugins>
         </pluginManagement>
 
         <plugins>
+            <plugin><!-- lombok-maven-plugin -->
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+            </plugin>
             <plugin><!-- maven-war-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -185,31 +188,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin><!-- cargo-maven-plugin -->
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven3-plugin</artifactId>
-                <configuration>
-                    <container>
-                        <containerId>tomcat10x</containerId>
-                        <type>embedded</type>
-                    </container>
-                    <deployables>
-                        <deployable>
-                            <properties>
-                                <context>/</context>
-                            </properties>
-                        </deployable>
-                    </deployables>
-                </configuration>
-            </plugin>
             <plugin><!-- jetty-maven-plugin -->
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <configuration>
-                    <webApp>
-                        <contextPath>/</contextPath>
-                    </webApp>
-                </configuration>
+            </plugin>
+            <plugin><!-- payara-micro-maven-plugin -->
+                <groupId>fish.payara.maven.plugins</groupId>
+                <artifactId>payara-micro-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

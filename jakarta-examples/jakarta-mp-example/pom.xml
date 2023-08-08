@@ -31,17 +31,4 @@
             <version>${payara.version}</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin><!-- payara-micro-maven-plugin -->
-                <groupId>fish.payara.maven.plugins</groupId>
-                <artifactId>payara-micro-maven-plugin</artifactId>
-            </plugin>
-            <plugin><!-- lombok-maven-plugin -->
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>
