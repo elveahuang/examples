@@ -164,12 +164,18 @@
                         </webApp>
                     </configuration>
                 </plugin>
-                <plugin><!-- payara-micro-maven-plugin -->
+                <plugin><!-- payara-maven-plugin -->
                     <groupId>fish.payara.maven.plugins</groupId>
                     <artifactId>payara-micro-maven-plugin</artifactId>
                     <version>${payara-maven-plugin.version}</version>
                     <configuration>
                         <payaraVersion>${payara.version}</payaraVersion>
+                        <artifactItem>
+                            <groupId>fish.payara.extras</groupId>
+                            <artifactId>payara-micro</artifactId>
+                            <version>${payara.version}</version>
+                        </artifactItem>
+                        <contextRoot>/</contextRoot>
                     </configuration>
                 </plugin>
             </plugins>
