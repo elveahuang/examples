@@ -54,16 +54,16 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.1.2</spring-boot.version>
+        <spring-boot.version>3.1.3</spring-boot.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
-        <spring-boot-admin.version>3.1.4</spring-boot-admin.version>
+        <spring-boot-admin.version>3.1.5</spring-boot-admin.version>
         <!-- 3rd party -->
         <asm.version>9.5</asm.version>
         <lombok.version>1.18.28</lombok.version>
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
         <jetty.version>11.0.15</jetty.version>
-        <payara.version>6.2023.7</payara.version>
+        <payara.version>6.2023.8</payara.version>
         <!-- maven -->
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
