@@ -25,10 +25,5 @@
             <artifactId>asm</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency><!-- payara-micro -->
-            <groupId>fish.payara.extras</groupId>
-            <artifactId>payara-micro</artifactId>
-            <version>${payara.version}</version>
-        </dependency>
     </dependencies>
 </project>
