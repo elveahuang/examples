@@ -48,21 +48,21 @@
 
     <properties>
         <!-- project -->
-        <project.source>17</project.source>
-        <project.target>17</project.target>
+        <project.source>21</project.source>
+        <project.target>21</project.target>
         <project.encoding>UTF-8</project.encoding>
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.1.5</spring-boot.version>
+        <spring-boot.version>3.2.0</spring-boot.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
-        <spring-boot-admin.version>3.1.7</spring-boot-admin.version>
+        <spring-boot-admin.version>3.1.8</spring-boot-admin.version>
         <!-- 3rd party -->
         <asm.version>9.6</asm.version>
         <lombok.version>1.18.30</lombok.version>
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
-        <jetty.version>11.0.17</jetty.version>
+        <jetty.version>11.0.18</jetty.version>
         <wildfly.version>30.0.0.Final</wildfly.version>
         <!-- maven -->
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>

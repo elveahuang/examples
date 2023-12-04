@@ -9,6 +9,5 @@
     <packaging>pom</packaging>
     <modules>
         <module>jakarta-base-example</module>
-        <module>jakarta-mp-example</module>
     </modules>
 </project>
