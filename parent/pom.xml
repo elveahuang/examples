@@ -54,22 +54,23 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.2.0</spring-boot.version>
-        <spring-cloud.version>2022.0.4</spring-cloud.version>
-        <spring-boot-admin.version>3.1.8</spring-boot-admin.version>
+        <spring-boot.version>3.2.5</spring-boot.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+        <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
         <!-- 3rd party -->
-        <asm.version>9.6</asm.version>
-        <lombok.version>1.18.30</lombok.version>
+        <asm.version>9.7</asm.version>
+        <lombok.version>1.18.32</lombok.version>
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
+        <mybatis-plus.version>3.5.6</mybatis-plus.version>
         <!-- server -->
-        <jetty.version>11.0.18</jetty.version>
+        <jetty.version>11.0.20</jetty.version>
         <wildfly.version>30.0.0.Final</wildfly.version>
         <!-- maven -->
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
-        <wildfly-maven-plugin.version>4.2.0.Final</wildfly-maven-plugin.version>
+        <wildfly-maven-plugin.version>5.0.0.Final</wildfly-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -99,6 +100,13 @@
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-bom</artifactId>
                 <version>${jakarta-platform.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- mybatis-plus -->
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>${mybatis-plus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
