@@ -1,32 +1,36 @@
 # 模式
 mode:
     type: Standalone
+    repository:
+        type: JDBC
 # 数据源
 dataSources:
-    main:
+    masterDataSource:
         dataSourceClassName: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://127.0.0.1:3306/master?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
         username: root
         password: root
-    slave:
+        poolName: main
+    slaveDataSource:
         dataSourceClassName: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.cj.jdbc.Driver
         jdbcUrl: jdbc:mysql://127.0.0.1:3306/slave?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
         username: root
         password: root
-rules:
-    - !READWRITE_SPLITTING
-        dataSourceGroups:
-            mainDataSource:
-                writeDataSourceName: main
-                readDataSourceNames:
-                    - slave
-                transactionalReadQueryStrategy: PRIMARY
-                loadBalancerName: random
-        loadBalancers:
-            random:
-                type: RANDOM
+        poolName: slave
+#rules:
+#    - !READWRITE_SPLITTING
+#        dataSourceGroups:
+#            mainDataSource:
+#                writeDataSourceName: masterDataSource
+#                readDataSourceNames:
+#                    - slaveDataSource
+#                transactionalReadQueryStrategy: PRIMARY
+#                loadBalancerName: random
+#        loadBalancers:
+#            random:
+#                type: RANDOM
 # 通用配置
 props:
     sql-show: true

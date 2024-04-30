@@ -1,6 +1,20 @@
+# 内嵌服务器
 server:
-    port: 8080
+    port: 8082
+# 数据源
 spring:
     datasource:
-        driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
-        url: jdbc:shardingsphere:classpath:sharding.yaml
+        master:
+            name: master
+            type: com.zaxxer.hikari.HikariDataSource
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/master?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+            username: root
+            password: root
+        slave:
+            name: slave
+            type: com.zaxxer.hikari.HikariDataSource
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/slave?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+            username: root
+            password: root
