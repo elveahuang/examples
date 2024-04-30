@@ -1,15 +1,15 @@
-package cn.elvea.boot.mvc.controller;
+package cn.elvea.boot.shardingsphere.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/")
 public class DefaultController {
 
     @RequestMapping()
     public String index() {
-        return "index";
+        return "Hello World";
     }
 
 }

@@ -1,4 +1,4 @@
-package cn.elvea.boot.mvc;
+package cn.elvea.boot.shardingsphere;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

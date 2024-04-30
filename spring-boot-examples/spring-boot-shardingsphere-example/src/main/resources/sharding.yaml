@@ -1,0 +1,32 @@
+# 模式
+mode:
+    type: Standalone
+# 数据源
+dataSources:
+    main:
+        dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://127.0.0.1:3306/master?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
+    slave:
+        dataSourceClassName: com.zaxxer.hikari.HikariDataSource
+        driverClassName: com.mysql.cj.jdbc.Driver
+        jdbcUrl: jdbc:mysql://127.0.0.1:3306/slave?useUnicode=true&characterEncoding=UTF-8&useOldAliasMetadataBehavior=true&allowPublicKeyRetrieval=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
+rules:
+    - !READWRITE_SPLITTING
+        dataSourceGroups:
+            mainDataSource:
+                writeDataSourceName: main
+                readDataSourceNames:
+                    - slave
+                transactionalReadQueryStrategy: PRIMARY
+                loadBalancerName: random
+        loadBalancers:
+            random:
+                type: RANDOM
+# 通用配置
+props:
+    sql-show: true
