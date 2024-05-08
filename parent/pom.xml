@@ -43,6 +43,7 @@
         <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
         <!-- 3rd party -->
         <asm.version>9.7</asm.version>
+        <druid.version>1.2.22</druid.version>
         <lombok.version>1.18.32</lombok.version>
         <guava.version>33.1.0-jre</guava.version>
         <mybatis-plus.version>3.5.6</mybatis-plus.version>
@@ -111,6 +112,11 @@
                         <artifactId>shardingsphere-test-fixture-database</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+            <dependency><!-- druid -->
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
             </dependency>
             <dependency><!-- lombok -->
                 <groupId>org.projectlombok</groupId>
