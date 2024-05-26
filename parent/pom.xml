@@ -38,20 +38,20 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.2.5</spring-boot.version>
+        <spring-boot.version>3.3.0</spring-boot.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
         <spring-boot-admin.version>3.2.3</spring-boot-admin.version>
         <!-- 3rd party -->
         <asm.version>9.7</asm.version>
-        <druid.version>1.2.22</druid.version>
+        <druid.version>1.2.23</druid.version>
         <lombok.version>1.18.32</lombok.version>
-        <guava.version>33.1.0-jre</guava.version>
+        <guava.version>33.2.0-jre</guava.version>
         <mybatis-plus.version>3.5.6</mybatis-plus.version>
         <shardingsphere.version>5.5.0</shardingsphere.version>
         <!-- jakarta -->
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
-        <jetty.version>12.0.8</jetty.version>
+        <jetty.version>12.0.9</jetty.version>
         <wildfly.version>32.0.0.Final</wildfly.version>
         <!-- maven -->
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
