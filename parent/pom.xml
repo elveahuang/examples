@@ -38,27 +38,27 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-boot.version>3.3.3</spring-boot.version>
+        <spring-boot.version>3.4.0</spring-boot.version>
         <spring-cloud.version>2023.0.3</spring-cloud.version>
-        <spring-boot-admin.version>3.3.3</spring-boot-admin.version>
+        <spring-boot-admin.version>3.3.6</spring-boot-admin.version>
         <!-- 3rd party -->
-        <asm.version>9.7</asm.version>
+        <asm.version>9.7.1</asm.version>
         <druid.version>1.2.23</druid.version>
-        <lombok.version>1.18.34</lombok.version>
-        <guava.version>33.3.0-jre</guava.version>
-        <mybatis-plus.version>3.5.7</mybatis-plus.version>
-        <shardingsphere.version>5.5.0</shardingsphere.version>
+        <lombok.version>1.18.36</lombok.version>
+        <guava.version>33.3.1-jre</guava.version>
+        <mybatis-plus.version>3.5.9</mybatis-plus.version>
+        <shardingsphere.version>5.5.1</shardingsphere.version>
         <!-- jakarta -->
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
-        <jetty.version>12.0.12</jetty.version>
-        <wildfly.version>33.0.0.Final</wildfly.version>
+        <jetty.version>12.0.15</jetty.version>
+        <wildfly.version>34.0.1.Final</wildfly.version>
         <!-- maven -->
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
-        <wildfly-maven-plugin.version>5.0.0.Final</wildfly-maven-plugin.version>
+        <wildfly-maven-plugin.version>5.0.1.Final</wildfly-maven-plugin.version>
     </properties>
 
     <dependencyManagement>

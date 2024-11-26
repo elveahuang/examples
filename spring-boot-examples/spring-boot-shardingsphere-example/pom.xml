@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
+        <dependency><!-- spring-boot -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>

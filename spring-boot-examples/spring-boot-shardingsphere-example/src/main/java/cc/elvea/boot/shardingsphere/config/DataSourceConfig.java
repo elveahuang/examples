@@ -6,9 +6,9 @@ import org.apache.shardingsphere.driver.api.ShardingSphereDataSourceFactory;
 import org.apache.shardingsphere.infra.algorithm.core.config.AlgorithmConfiguration;
 import org.apache.shardingsphere.infra.config.mode.ModeConfiguration;
 import org.apache.shardingsphere.mode.repository.standalone.StandalonePersistRepositoryConfiguration;
-import org.apache.shardingsphere.readwritesplitting.api.ReadwriteSplittingRuleConfiguration;
-import org.apache.shardingsphere.readwritesplitting.api.rule.ReadwriteSplittingDataSourceRuleConfiguration;
-import org.apache.shardingsphere.single.api.config.SingleRuleConfiguration;
+import org.apache.shardingsphere.readwritesplitting.config.ReadwriteSplittingRuleConfiguration;
+import org.apache.shardingsphere.readwritesplitting.config.rule.ReadwriteSplittingDataSourceGroupRuleConfiguration;
+import org.apache.shardingsphere.single.config.SingleRuleConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -37,8 +37,8 @@ public class DataSourceConfig {
         dataSourceMap.put("master", masterDataSource);
         dataSourceMap.put("slave", slaveDataSource);
 
-        ReadwriteSplittingDataSourceRuleConfiguration dataSourceConfiguration =
-                new ReadwriteSplittingDataSourceRuleConfiguration("main", "master", List.of("slave"), "lb");
+        ReadwriteSplittingDataSourceGroupRuleConfiguration dataSourceConfiguration =
+                new ReadwriteSplittingDataSourceGroupRuleConfiguration("main", "master", List.of("slave"), "lb");
 
         Map<String, AlgorithmConfiguration> loadBalancers = new HashMap<>();
         loadBalancers.put("lb", new AlgorithmConfiguration("ROUND_ROBIN", new Properties()));
@@ -51,8 +51,8 @@ public class DataSourceConfig {
         Properties properties = new Properties();
         properties.setProperty("sql-show", "true");
 
-        return ShardingSphereDataSourceFactory.createDataSource(
-                modeConfig, dataSourceMap, List.of(ruleConfiguration, ruleConfig), properties);
+        return ShardingSphereDataSourceFactory
+                .createDataSource(modeConfig, dataSourceMap, List.of(ruleConfiguration, ruleConfig), properties);
     }
 
     /**
