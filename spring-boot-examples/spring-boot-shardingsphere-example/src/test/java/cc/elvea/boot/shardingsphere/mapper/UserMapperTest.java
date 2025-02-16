@@ -1,6 +1,6 @@
 package cc.elvea.boot.shardingsphere.mapper;
 
-import cc.elvea.boot.shardingsphere.Application;
+import cc.elvea.boot.shardingsphere.ShardingSphereApplication;
 import cc.elvea.boot.shardingsphere.entity.User;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import jakarta.transaction.Transactional;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @Slf4j
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = ShardingSphereApplication.class)
 @Transactional
 @Rollback(false)
 public class UserMapperTest {

@@ -10,7 +10,7 @@
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
     <artifactId>spring-boot-shardingsphere-example</artifactId>
-    <description>Spring Boot Shardingsphere Example</description>
+    <description>Spring Boot ShardingSphere Example</description>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 

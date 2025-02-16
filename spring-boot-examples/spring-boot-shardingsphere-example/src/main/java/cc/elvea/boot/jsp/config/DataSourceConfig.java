@@ -1,4 +1,4 @@
-package cc.elvea.boot.shardingsphere.config;
+package cc.elvea.boot.jsp.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.slf4j.Slf4j;

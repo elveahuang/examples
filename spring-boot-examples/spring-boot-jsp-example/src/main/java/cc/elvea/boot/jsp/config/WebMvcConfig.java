@@ -1,6 +1,6 @@
-package cc.elvea.boot.shardingsphere.config;
+package cc.elvea.boot.jsp.config;
 
-import cc.elvea.boot.shardingsphere.filter.ResourceFilter;
+import cc.elvea.boot.jsp.filter.ResourceFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

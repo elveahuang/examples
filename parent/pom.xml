@@ -14,6 +14,10 @@
             <id>aliyun</id>
             <url>https://maven.aliyun.com/repository/public</url>
         </repository>
+        <repository><!-- spring -->
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
+        </repository>
         <repository><!-- official -->
             <id>official</id>
             <url>https://central.maven.org/maven2</url>
@@ -23,6 +27,10 @@
         <pluginRepository><!-- aliyun -->
             <id>aliyun</id>
             <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+        <pluginRepository><!-- spring -->
+            <id>aliyun</id>
+            <url>https://maven.aliyun.com/repository/spring</url>
         </pluginRepository>
         <pluginRepository><!-- official -->
             <id>official</id>
@@ -38,6 +46,7 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
+        <spring-ai.version>1.0.0-M6</spring-ai.version>
         <spring-boot.version>3.4.2</spring-boot.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-boot-admin.version>3.4.2</spring-boot-admin.version>
@@ -80,6 +89,13 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-dependencies</artifactId>
                 <version>${spring-boot-admin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.ai</groupId>
+                <artifactId>spring-ai-bom</artifactId>
+                <version>${spring-ai.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

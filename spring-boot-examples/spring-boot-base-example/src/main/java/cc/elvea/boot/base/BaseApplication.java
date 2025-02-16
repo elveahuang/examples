@@ -1,13 +1,13 @@
-package cc.elvea.boot.shardingsphere;
+package cc.elvea.boot.base;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class BaseApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(BaseApplication.class, args);
     }
 
 }

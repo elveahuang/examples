@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 @Slf4j
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = ShardingSphereApplication.class)
 @Transactional
 @Rollback(false)
 public class DataSourceTest {

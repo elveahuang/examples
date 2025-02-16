@@ -1,4 +1,4 @@
-package cc.elvea.boot.shardingsphere.controller;
+package cc.elvea.boot.jsp.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

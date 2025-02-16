@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @MapperScan("cc.elvea.boot.shardingsphere.mapper")
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-public class Application {
+public class ShardingSphereApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ShardingSphereApplication.class, args);
     }
 
 }

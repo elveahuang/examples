@@ -1,13 +1,13 @@
-package cc.elvea.boot.thymeleaf;
+package cc.elvea.ai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class AiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(AiApplication.class, args);
     }
 
 }
