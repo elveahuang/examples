@@ -1,4 +1,4 @@
-package cc.elvea.ai;
+package cc.elvea.boot.ai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

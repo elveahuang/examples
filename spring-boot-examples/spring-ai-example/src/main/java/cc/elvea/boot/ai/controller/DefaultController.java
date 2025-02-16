@@ -1,4 +1,4 @@
-package cc.elvea.ai.controller;
+package cc.elvea.boot.ai.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
