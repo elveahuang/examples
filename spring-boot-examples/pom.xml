@@ -8,6 +8,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
+        <module>spring-ai-example</module>
         <module>spring-boot-base-example</module>
         <module>spring-boot-jsp-example</module>
         <module>spring-boot-thymeleaf-example</module>
