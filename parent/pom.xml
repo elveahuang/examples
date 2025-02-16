@@ -50,8 +50,12 @@
         <spring-boot.version>3.4.2</spring-boot.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-boot-admin.version>3.4.2</spring-boot-admin.version>
+        <!-- ai -->
+        <openai.version>0.22.0</openai.version>
+        <dashscope.version>2.18.2</dashscope.version>
         <!-- 3rd party -->
         <asm.version>9.7.1</asm.version>
+        <hutool.version>5.8.26</hutool.version>
         <lombok.version>1.18.36</lombok.version>
         <guava.version>33.4.0-jre</guava.version>
         <mybatis-plus.version>3.5.10.1</mybatis-plus.version>
@@ -92,10 +96,17 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
+            <dependency><!-- spring-ai -->
                 <groupId>org.springframework.ai</groupId>
                 <artifactId>spring-ai-bom</artifactId>
                 <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- hutool -->
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -133,6 +144,16 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
+            <dependency><!-- openai -->
+                <groupId>com.openai</groupId>
+                <artifactId>openai-java</artifactId>
+                <version>${openai.version}</version>
+            </dependency>
+            <dependency><!-- dashscope -->
+                <groupId>com.alibaba</groupId>
+                <artifactId>dashscope-sdk-java</artifactId>
+                <version>${dashscope.version}</version>
+            </dependency>
             <dependency><!-- asm -->
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
@@ -147,7 +168,7 @@
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
+        <dependency><!-- lombok -->
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -155,6 +176,10 @@
         <dependency><!-- guava -->
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+        </dependency>
+        <dependency><!-- hutool -->
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
         </dependency>
     </dependencies>
 

@@ -9,7 +9,7 @@
         <version>1.0.0</version>
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
-    <artifactId>spring-ai-example</artifactId>
+    <artifactId>spring-boot-ai-example</artifactId>
     <description>Spring AI Example</description>
     <version>1.0.0</version>
     <packaging>jar</packaging>
@@ -22,6 +22,19 @@
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency><!-- openai -->
+            <groupId>com.openai</groupId>
+            <artifactId>openai-java</artifactId>
+        </dependency>
+        <dependency><!-- dashscope -->
+            <groupId>com.alibaba</groupId>
+            <artifactId>dashscope-sdk-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
