@@ -27,10 +27,10 @@ public class OpenAiTests {
 
     @Test
     public void baseTest() {
-        ChatResponse response = chatModel.call(
+        ChatResponse response = this.chatModel.call(
                 new Prompt(
                         "Generate the names of 5 famous pirates.",
-                        OpenAiChatOptions.builder().model(this.properties.getDashScope().getModel()).build()
+                        OpenAiChatOptions.builder().build()
                 ));
         System.out.println(response);
     }

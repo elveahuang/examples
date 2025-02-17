@@ -15,13 +15,17 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
+        <dependency><!-- spring-boot -->
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
+        <dependency><!-- spring-ai -->
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-openai-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>
         </dependency>
         <dependency><!-- openai -->
             <groupId>com.openai</groupId>

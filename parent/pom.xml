@@ -51,6 +51,7 @@
         <spring-cloud.version>2024.0.0</spring-cloud.version>
         <spring-boot-admin.version>3.4.2</spring-boot-admin.version>
         <!-- ai -->
+        <mcp.version>0.7.0</mcp.version>
         <openai.version>0.22.0</openai.version>
         <dashscope.version>2.18.2</dashscope.version>
         <!-- 3rd party -->
@@ -100,6 +101,13 @@
                 <groupId>org.springframework.ai</groupId>
                 <artifactId>spring-ai-bom</artifactId>
                 <version>${spring-ai.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- mcp -->
+                <groupId>io.modelcontextprotocol.sdk</groupId>
+                <artifactId>mcp-bom</artifactId>
+                <version>${mcp.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -153,6 +161,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>dashscope-sdk-java</artifactId>
                 <version>${dashscope.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency><!-- asm -->
                 <groupId>org.ow2.asm</groupId>
