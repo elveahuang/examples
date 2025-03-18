@@ -2,6 +2,7 @@ package cc.elvea.repo.spring.mvc;
 
 import cc.elvea.repo.spring.mvc.config.Config;
 import cc.elvea.repo.spring.mvc.config.WebMvcConfig;
+import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -16,6 +17,7 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
     }
 
     @Override
+    @NonNull
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }

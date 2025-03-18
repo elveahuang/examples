@@ -49,11 +49,11 @@
         <spring-ai.version>1.0.0-M6</spring-ai.version>
         <spring-boot.version>3.4.3</spring-boot.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
-        <spring-boot-admin.version>3.4.3</spring-boot-admin.version>
+        <spring-boot-admin.version>3.4.4</spring-boot-admin.version>
         <!-- ai -->
         <mcp.version>0.7.0</mcp.version>
-        <openai.version>0.29.0</openai.version>
-        <dashscope.version>2.18.3</dashscope.version>
+        <openai.version>0.34.1</openai.version>
+        <dashscope.version>2.18.4</dashscope.version>
         <!-- 3rd party -->
         <asm.version>9.7.1</asm.version>
         <hutool.version>5.8.36</hutool.version>
@@ -64,7 +64,7 @@
         <!-- jakarta -->
         <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- server -->
-        <jetty.version>12.0.16</jetty.version>
+        <jetty.version>12.0.17</jetty.version>
         <wildfly.version>35.0.1.Final</wildfly.version>
         <!-- maven -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
