@@ -11,6 +11,17 @@ const copyLibs = async () => {
     src(nodeModulesDir + '/jquery/dist/jquery.min.js')
         .pipe(dest(targetDir + '/jquery'));
 
+    // popperjs
+    src(nodeModulesDir + '/@popperjs/core/dist/umd/popper.js')
+        .pipe(dest(targetDir + '/popperjs'));
+
+    src(nodeModulesDir + '/@popperjs/core/dist/umd/popper.min.js')
+        .pipe(dest(targetDir + '/popperjs'));
+
+    // Bootstrap
+    src(nodeModulesDir + '/bootstrap/dist/**')
+        .pipe(dest(targetDir + '/bootstrap'));
+
     // Layui
     src(nodeModulesDir + '/layui/dist/**')
         .pipe(dest(targetDir + '/layui'));
