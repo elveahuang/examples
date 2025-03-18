@@ -10,7 +10,7 @@
         <relativePath>../../parent/pom.xml</relativePath>
     </parent>
     <artifactId>spring-boot-web-example</artifactId>
-    <description>Spring Boot Example</description>
+    <description>Spring Boot Legacy Web Example</description>
     <version>1.0.0</version>
     <packaging>war</packaging>
 
