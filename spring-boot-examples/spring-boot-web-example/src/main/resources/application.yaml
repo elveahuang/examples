@@ -5,3 +5,19 @@ spring:
         view:
             prefix: /WEB-INF/views/
             suffix: .jsp
+    thymeleaf:
+        cache: false
+        prefix: /WEB-INF/templates/
+        suffix: .html
+        template-resolver-order: 1
+        view-names: html/*.html
+    data:
+        redis:
+            host: 127.0.0.1
+            port: 6379
+            password: redis
+            timeout: 10000
+            database: 1
+    session:
+        redis:
+            namespace: app:session
