@@ -48,24 +48,24 @@
         <!-- spring -->
         <spring-ai.version>1.0.0-M6</spring-ai.version>
         <spring-boot.version>3.4.4</spring-boot.version>
-        <spring-cloud.version>2024.0.0</spring-cloud.version>
-        <spring-boot-admin.version>3.4.4</spring-boot-admin.version>
+        <spring-cloud.version>2024.0.1</spring-cloud.version>
+        <spring-boot-admin.version>3.4.5</spring-boot-admin.version>
         <!-- ai -->
         <mcp.version>0.7.0</mcp.version>
-        <openai.version>0.34.1</openai.version>
-        <dashscope.version>2.18.4</dashscope.version>
+        <openai.version>0.40.1</openai.version>
+        <dashscope.version>2.19.0</dashscope.version>
         <!-- 3rd party -->
-        <asm.version>9.7.1</asm.version>
+        <asm.version>9.8</asm.version>
         <hutool.version>5.8.36</hutool.version>
         <lombok.version>1.18.36</lombok.version>
-        <guava.version>33.4.0-jre</guava.version>
-        <mybatis-plus.version>3.5.10.1</mybatis-plus.version>
+        <guava.version>33.4.6-jre</guava.version>
+        <netty.version>4.1.119.Final</netty.version>
+        <mybatis-plus.version>3.5.11</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
-        <!-- jakarta -->
-        <jakarta-platform.version>10.0.0</jakarta-platform.version>
-        <!-- server -->
-        <jetty.version>12.0.17</jetty.version>
+        <!-- jakarta & server -->
+        <jetty.version>12.0.18</jetty.version>
         <wildfly.version>35.0.1.Final</wildfly.version>
+        <jakarta-platform.version>10.0.0</jakarta-platform.version>
         <!-- maven -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
@@ -129,6 +129,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-bom</artifactId>
                 <version>${mybatis-plus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- netty -->
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <version>${netty.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
