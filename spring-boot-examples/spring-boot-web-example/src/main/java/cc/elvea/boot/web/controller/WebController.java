@@ -16,4 +16,9 @@ public class WebController {
         return "index";
     }
 
+    @RequestMapping("/jsp/login")
+    public String loginJsp() {
+        return "login";
+    }
+
 }

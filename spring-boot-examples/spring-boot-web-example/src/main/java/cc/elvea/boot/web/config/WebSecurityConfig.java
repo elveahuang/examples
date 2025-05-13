@@ -8,15 +8,19 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.session.FindByIndexNameSessionRepository;
+import org.springframework.session.Session;
+import org.springframework.session.security.SpringSessionBackedSessionRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @AllArgsConstructor
 @EnableWebSecurity
 @EnableMethodSecurity
-@Configuration(proxyBeanMethods = false)
+@Configuration(proxyBeanMethods = true)
 public class WebSecurityConfig implements WebMvcConfigurer {
+
+    private FindByIndexNameSessionRepository<? extends Session> sessionRepository;
 
     @Bean
     @Order(1)
@@ -31,11 +35,23 @@ public class WebSecurityConfig implements WebMvcConfigurer {
     @Bean
     public SecurityFilterChain webSecurityChain(HttpSecurity http) throws Exception {
         return http
+                .headers(AbstractHttpConfigurer::disable)
+                .csrf(AbstractHttpConfigurer::disable)
+                .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
-                .authorizeHttpRequests(request ->
-                        request.anyRequest().permitAll())
+                        .maximumSessions(2)
+                        .sessionRegistry(sessionRegistry())
+                )
+                .authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/jsp/login").permitAll()
+                        .anyRequest().permitAll()
+                )
                 .build();
+    }
+
+    @Bean
+    public SpringSessionBackedSessionRegistry<? extends Session> sessionRegistry() {
+        return new SpringSessionBackedSessionRegistry<>(this.sessionRepository);
     }
 
 }

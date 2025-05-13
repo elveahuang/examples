@@ -1,5 +1,5 @@
 server:
-    port: 8080
+    port: 8181
 spring:
     mvc:
         view:
@@ -21,3 +21,10 @@ spring:
         redis:
             namespace: app:session
             repository-type: indexed
+sitemesh:
+    decorator:
+        metaTag: decorator
+        prefix: /WEB-INF/views/decorators/
+        mappings:
+            -   path: /*
+                decorator: default.jsp
