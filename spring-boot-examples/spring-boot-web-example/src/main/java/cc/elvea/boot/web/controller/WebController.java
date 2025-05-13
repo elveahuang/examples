@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class WebController {
 
-    @RequestMapping("/web/")
+    @RequestMapping({"/web/", "/web/index"})
     public String index() {
         return "html/index.html";
     }
 
-    @RequestMapping("/jsp/")
+    @RequestMapping({"/jsp/", "/jsp/index"})
     public String indexJsp() {
         return "index";
     }

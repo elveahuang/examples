@@ -31,9 +31,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <dependency>
+        <dependency><!-- session -->
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
+        </dependency>
+        <dependency><!-- sitemesh -->
+            <groupId>org.sitemesh</groupId>
+            <artifactId>sitemesh</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -46,12 +46,12 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-ai.version>1.0.0-M7</spring-ai.version>
+        <spring-ai.version>1.0.0-M8</spring-ai.version>
         <spring-boot.version>3.4.5</spring-boot.version>
         <spring-cloud.version>2024.0.1</spring-cloud.version>
         <spring-boot-admin.version>3.4.5</spring-boot-admin.version>
         <!-- ai -->
-        <mcp.version>0.8.1</mcp.version>
+        <mcp.version>0.9.0</mcp.version>
         <openai.version>1.4.1</openai.version>
         <dashscope.version>2.19.2</dashscope.version>
         <!-- 3rd party -->
@@ -59,6 +59,7 @@
         <hutool.version>5.8.37</hutool.version>
         <lombok.version>1.18.38</lombok.version>
         <guava.version>33.4.8-jre</guava.version>
+        <sitemesh.version>3.2.2</sitemesh.version>
         <netty.version>4.1.119.Final</netty.version>
         <mybatis-plus.version>3.5.11</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
@@ -184,6 +185,16 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <dependency><!-- sitemesh -->
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>spring-boot-starter-sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
