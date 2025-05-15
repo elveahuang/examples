@@ -17,7 +17,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return new ResourceFilter();
     }
 
-    @Bean(name = "sitemeshFilter")
+    @Bean
     public FilterRegistrationBean<CustomSiteMeshFilter> sitemeshFilter() {
         FilterRegistrationBean<CustomSiteMeshFilter> bean = new FilterRegistrationBean<>();
         bean.setFilter(new CustomSiteMeshFilter());

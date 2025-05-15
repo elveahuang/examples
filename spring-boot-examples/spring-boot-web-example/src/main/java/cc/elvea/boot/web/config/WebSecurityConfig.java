@@ -1,5 +1,6 @@
 package cc.elvea.boot.web.config;
 
+import jakarta.servlet.DispatcherType;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,13 +40,15 @@ public class WebSecurityConfig implements WebMvcConfigurer {
                 .csrf(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session
-                        .maximumSessions(2)
-                        .sessionRegistry(sessionRegistry())
+                        .maximumSessions(2).sessionRegistry(sessionRegistry())
                 )
                 .authorizeHttpRequests(authorize -> authorize
+                        .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
                         .requestMatchers("/jsp/login").permitAll()
-                        .anyRequest().permitAll()
+                        .anyRequest().authenticated()
                 )
+                .formLogin(form -> form
+                        .loginPage("/jsp/login").permitAll())
                 .build();
     }
 
