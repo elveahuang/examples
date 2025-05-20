@@ -3,12 +3,12 @@
     "version": "1.0.0",
     "dependencies": {
         "@popperjs/core": "^2.11.8",
-        "bootstrap": "^5.3.3",
+        "bootstrap": "^5.3.6",
         "jquery": "^3.7.1",
-        "layui": "^2.10.0"
+        "layui": "^2.11.2"
     },
     "devDependencies": {
         "gulp": "^5.0.0"
     },
-    "packageManager": "pnpm@10.6.3"
+    "packageManager": "pnpm@10.11.0"
 }

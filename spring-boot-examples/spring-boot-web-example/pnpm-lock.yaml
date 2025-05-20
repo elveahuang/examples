@@ -12,14 +12,14 @@ importers:
         specifier: ^2.11.8
         version: 2.11.8
       bootstrap:
-        specifier: ^5.3.3
-        version: 5.3.3(@popperjs/core@2.11.8)
+        specifier: ^5.3.6
+        version: 5.3.6(@popperjs/core@2.11.8)
       jquery:
         specifier: ^3.7.1
         version: 3.7.1
       layui:
-        specifier: ^2.10.0
-        version: 2.10.0
+        specifier: ^2.11.2
+        version: 2.11.2
     devDependencies:
       gulp:
         specifier: ^5.0.0
@@ -86,8 +86,8 @@ packages:
   bl@5.1.0:
     resolution: {integrity: sha512-tv1ZJHLfTDnXE6tMHv73YgSJaWR2AFuPwMntBe7XL/GBFHnT0CLnsHMogfk5+GzCDC5ZWarSCYaIGATZt9dNsQ==}
 
-  bootstrap@5.3.3:
-    resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
+  bootstrap@5.3.6:
+    resolution: {integrity: sha512-jX0GAcRzvdwISuvArXn3m7KZscWWFAf1MKBcnzaN02qWMb3jpMoUX4/qgeiGzqyIb4ojulRzs89UCUmGcFSzTA==}
     peerDependencies:
       '@popperjs/core': ^2.11.8
 
@@ -348,8 +348,8 @@ packages:
     resolution: {integrity: sha512-j+y6WhTLN4Itnf9j5ZQos1BGPCS8DAwmgMroR3OzfxAsBxam0hMw7J8M3KqZl0pLQJ1jNnwIexg5DYpC/ctwEQ==}
     engines: {node: '>= 10.13.0'}
 
-  layui@2.10.0:
-    resolution: {integrity: sha512-VYEAy1biS9piDqJwztizV923HM6sbArVjWdDCUZ9tQph6XnntGjtKCmndZl/3tdpR0yZSAHrPxLYjNUVjzymbg==}
+  layui@2.11.2:
+    resolution: {integrity: sha512-gXP1W0UnBJenfaaXiB75lyuFfLbj5LG8QvmwQvqKV1H0BS2r0NoCTYYZw8Th2X0BDRTDDTQMr18kUzlsxYqvmQ==}
 
   lead@4.0.0:
     resolution: {integrity: sha512-DpMa59o5uGUWWjruMp71e6knmwKU3jRBBn1kjuLWN9EeIOxNeSAwvHf03WIl8g/ZMR2oSQC9ej3yeLBwdDc/pg==}
@@ -638,7 +638,7 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  bootstrap@5.3.3(@popperjs/core@2.11.8):
+  bootstrap@5.3.6(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
@@ -902,7 +902,7 @@ snapshots:
 
   last-run@2.0.0: {}
 
-  layui@2.10.0: {}
+  layui@2.11.2: {}
 
   lead@4.0.0: {}
 
