@@ -18,10 +18,6 @@
             <id>aliyun-spring</id>
             <url>https://maven.aliyun.com/repository/spring</url>
         </repository>
-        <repository><!-- official -->
-            <id>official</id>
-            <url>https://central.maven.org/maven2</url>
-        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository><!-- aliyun -->
@@ -31,10 +27,6 @@
         <pluginRepository><!-- spring -->
             <id>aliyun-spring</id>
             <url>https://maven.aliyun.com/repository/spring</url>
-        </pluginRepository>
-        <pluginRepository><!-- official -->
-            <id>official</id>
-            <url>https://central.maven.org/maven2</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -47,8 +39,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
         <spring-ai.version>1.0.0</spring-ai.version>
-        <spring-boot.version>3.5.0</spring-boot.version>
-        <spring-cloud.version>2024.0.1</spring-cloud.version>
+        <spring-boot.version>3.5.3</spring-boot.version>
+        <spring-cloud.version>2025.0.0</spring-cloud.version>
         <spring-boot-admin.version>3.4.6</spring-boot-admin.version>
         <!-- ai -->
         <mcp.version>0.10.0</mcp.version>
@@ -60,13 +52,14 @@
         <lombok.version>1.18.38</lombok.version>
         <guava.version>33.4.8-jre</guava.version>
         <sitemesh.version>3.2.2</sitemesh.version>
-        <netty.version>4.1.121.Final</netty.version>
+        <netty.version>4.1.122.Final</netty.version>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
         <!-- jakarta & server -->
-        <jetty.version>12.0.21</jetty.version>
+        <jetty.version>12.0.22</jetty.version>
         <wildfly.version>36.0.1.Final</wildfly.version>
-        <jakarta-platform.version>10.0.0</jakarta-platform.version>
+        <microprofile.version>7.1</microprofile.version>
+        <jakarta-platform.version>11.0.0</jakarta-platform.version>
         <!-- maven -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
@@ -123,6 +116,19 @@
                 <groupId>jakarta.platform</groupId>
                 <artifactId>jakarta.jakartaee-bom</artifactId>
                 <version>${jakarta-platform.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.platform</groupId>
+                <artifactId>jakarta.jakartaee-api</artifactId>
+                <version>${jakarta-platform.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency><!-- microprofile -->
+                <groupId>org.eclipse.microprofile</groupId>
+                <artifactId>microprofile</artifactId>
+                <version>${microprofile.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -271,6 +277,11 @@
                             </users>
                         </add-user>
                     </configuration>
+                </plugin>
+                <plugin><!-- liberty-maven-plugin -->
+                    <groupId>io.openliberty.tools</groupId>
+                    <artifactId>liberty-maven-plugin</artifactId>
+                    <version>3.11.4</version>
                 </plugin>
             </plugins>
         </pluginManagement>

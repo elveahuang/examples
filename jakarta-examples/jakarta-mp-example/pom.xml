@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.elvea.repo</groupId>
+        <artifactId>parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../../parent/pom.xml</relativePath>
+    </parent>
+    <artifactId>jakarta-mp-example</artifactId>
+    <description>Jakarta MP Example</description>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>${jakarta-platform.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency><!-- microprofile -->
+            <groupId>org.eclipse.microprofile</groupId>
+            <artifactId>microprofile</artifactId>
+            <version>${microprofile.version}</version>
+            <type>pom</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>mp</finalName>
+        <plugins>
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
