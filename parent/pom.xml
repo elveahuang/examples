@@ -53,6 +53,7 @@
         <guava.version>33.4.8-jre</guava.version>
         <sitemesh.version>3.2.2</sitemesh.version>
         <netty.version>4.1.122.Final</netty.version>
+        <playwright.version>1.52.0</playwright.version>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
         <!-- jakarta & server -->
@@ -197,10 +198,10 @@
                 <artifactId>sitemesh</artifactId>
                 <version>${sitemesh.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.sitemesh</groupId>
-                <artifactId>spring-boot-starter-sitemesh</artifactId>
-                <version>${sitemesh.version}</version>
+            <dependency><!-- playwright -->
+                <groupId>com.microsoft.playwright</groupId>
+                <artifactId>playwright</artifactId>
+                <version>${playwright.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
