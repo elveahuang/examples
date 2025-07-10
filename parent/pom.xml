@@ -41,23 +41,23 @@
         <spring-ai.version>1.0.0</spring-ai.version>
         <spring-boot.version>3.5.3</spring-boot.version>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
-        <spring-boot-admin.version>3.4.6</spring-boot-admin.version>
+        <spring-boot-admin.version>3.5.1</spring-boot-admin.version>
         <!-- ai -->
         <mcp.version>0.10.0</mcp.version>
-        <openai.version>1.6.1</openai.version>
-        <dashscope.version>2.20.1</dashscope.version>
+        <openai.version>2.12.0</openai.version>
+        <dashscope.version>2.20.7</dashscope.version>
         <!-- 3rd party -->
         <asm.version>9.8</asm.version>
-        <hutool.version>5.8.38</hutool.version>
+        <hutool.version>5.8.39</hutool.version>
         <lombok.version>1.18.38</lombok.version>
         <guava.version>33.4.8-jre</guava.version>
         <sitemesh.version>3.2.2</sitemesh.version>
         <netty.version>4.1.122.Final</netty.version>
-        <playwright.version>1.52.0</playwright.version>
+        <playwright.version>1.53.0</playwright.version>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
         <!-- jakarta & server -->
-        <jetty.version>12.0.22</jetty.version>
+        <jetty.version>12.0.23</jetty.version>
         <wildfly.version>36.0.1.Final</wildfly.version>
         <microprofile.version>7.1</microprofile.version>
         <jakarta-platform.version>11.0.0</jakarta-platform.version>
@@ -66,6 +66,7 @@
         <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
         <wildfly-maven-plugin.version>5.1.3.Final</wildfly-maven-plugin.version>
     </properties>
 
@@ -243,6 +244,11 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
+                <plugin><!-- maven-clean-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>${maven-clean-plugin.version}</version>
+                </plugin>
                 <plugin><!-- lombok-maven-plugin -->
                     <groupId>org.projectlombok</groupId>
                     <artifactId>lombok-maven-plugin</artifactId>
@@ -295,6 +301,10 @@
             <plugin><!-- maven-war-plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
+            </plugin>
+            <plugin><!-- maven-clean-plugin -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
             </plugin>
             <plugin><!-- spring-boot-maven-plugin -->
                 <groupId>org.springframework.boot</groupId>

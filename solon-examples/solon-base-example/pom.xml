@@ -7,13 +7,10 @@
         <groupId>cn.elvea.repo</groupId>
         <artifactId>parent</artifactId>
         <version>1.0.0</version>
-        <relativePath>../parent/pom.xml</relativePath>
+        <relativePath>../../parent/pom.xml</relativePath>
     </parent>
-    <artifactId>spring-mvc-examples</artifactId>
+    <artifactId>solon-base-example</artifactId>
+    <description>Solon Boot Example</description>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-mvc-base-example</module>
-        <module>spring-mvc-jsp-example</module>
-    </modules>
+    <packaging>jar</packaging>
 </project>

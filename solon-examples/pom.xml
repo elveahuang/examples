@@ -9,11 +9,10 @@
         <version>1.0.0</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
-    <artifactId>spring-mvc-examples</artifactId>
+    <artifactId>solon-examples</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-mvc-base-example</module>
-        <module>spring-mvc-jsp-example</module>
+        <module>solon-base-example</module>
     </modules>
 </project>
