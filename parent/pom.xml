@@ -38,25 +38,25 @@
         <project.build.version>1.0.0</project.build.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
-        <spring-ai.version>1.1.0</spring-ai.version>
-        <spring-boot.version>4.0.0</spring-boot.version>
-        <spring-cloud.version>2025.1.0-RC1</spring-cloud.version>
+        <spring-ai.version>2.0.0-M1</spring-ai.version>
+        <spring-boot.version>4.0.1</spring-boot.version>
+        <spring-cloud.version>2025.1.0</spring-cloud.version>
         <spring-boot-admin.version>3.5.6</spring-boot-admin.version>
         <!-- ai -->
-        <openai.version>4.8.0</openai.version>
-        <dashscope.version>2.22.1</dashscope.version>
+        <openai.version>4.12.0</openai.version>
+        <dashscope.version>2.22.3</dashscope.version>
         <!-- 3rd party -->
-        <asm.version>9.9</asm.version>
-        <hutool.version>5.8.41</hutool.version>
+        <asm.version>9.9.1</asm.version>
+        <hutool.version>5.8.42</hutool.version>
         <lombok.version>1.18.42</lombok.version>
         <guava.version>33.5.0-jre</guava.version>
         <sitemesh.version>3.2.2</sitemesh.version>
-        <netty.version>4.1.128.Final</netty.version>
+        <netty.version>4.2.9.Final</netty.version>
         <playwright.version>1.56.0</playwright.version>
-        <mybatis-plus.version>3.5.14</mybatis-plus.version>
+        <mybatis-plus.version>3.5.15</mybatis-plus.version>
         <shardingsphere.version>5.5.2</shardingsphere.version>
         <!-- jakarta & server -->
-        <jetty.version>12.1.4</jetty.version>
+        <jetty.version>12.1.5</jetty.version>
         <wildfly.version>38.0.1.Final</wildfly.version>
         <microprofile.version>7.1</microprofile.version>
         <jakarta-platform.version>11.0.0</jakarta-platform.version>
