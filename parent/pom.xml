@@ -40,31 +40,26 @@
         <!-- spring -->
         <spring-ai.version>2.0.0-M2</spring-ai.version>
         <spring-boot.version>4.0.3</spring-boot.version>
-        <spring-cloud.version>2025.1.0</spring-cloud.version>
+        <spring-cloud.version>2025.1.1</spring-cloud.version>
         <spring-boot-admin.version>4.0.1</spring-boot-admin.version>
         <!-- ai -->
-        <openai.version>4.12.0</openai.version>
-        <dashscope.version>2.22.3</dashscope.version>
+        <openai.version>4.23.0</openai.version>
+        <dashscope.version>2.22.10</dashscope.version>
         <!-- 3rd party -->
         <asm.version>9.9.1</asm.version>
         <hutool.version>5.8.43</hutool.version>
         <lombok.version>1.18.42</lombok.version>
         <guava.version>33.5.0-jre</guava.version>
         <sitemesh.version>3.2.2</sitemesh.version>
-        <netty.version>4.2.9.Final</netty.version>
-        <playwright.version>1.56.0</playwright.version>
+        <netty.version>4.2.10.Final</netty.version>
+        <playwright.version>1.58.0</playwright.version>
         <mybatis-plus.version>3.5.15</mybatis-plus.version>
-        <shardingsphere.version>5.5.2</shardingsphere.version>
-        <!-- jakarta & server -->
-        <jetty.version>12.1.5</jetty.version>
-        <wildfly.version>38.0.1.Final</wildfly.version>
+        <shardingsphere.version>5.5.3</shardingsphere.version>
         <!-- maven -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
-        <jetty-maven-plugin.version>${jetty.version}</jetty-maven-plugin.version>
-        <maven-war-plugin.version>3.5.0</maven-war-plugin.version>
-        <maven-compiler-plugin.version>3.14.1</maven-compiler-plugin.version>
+        <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
-        <wildfly-maven-plugin.version>5.1.5.Final</wildfly-maven-plugin.version>
     </properties>
 
     <dependencyManagement>
