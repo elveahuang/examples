@@ -15,11 +15,11 @@ public class AppProperties {
      * 阿里云
      */
     @NestedConfigurationProperty
-    private DashScope dashScope = DashScope.builder().build();
+    private DashScopeConfig dashScope = DashScopeConfig.builder().build();
 
     @Data
     @Builder
-    public static class DashScope {
+    public static class DashScopeConfig {
         private String apiKey;
         private String model;
     }

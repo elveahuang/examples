@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
     <groupId>cn.elvea.repo</groupId>
     <artifactId>examples</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>parent</module>
-        <module>spring-boot-ai-example</module>
-        <module>spring-boot-base-example</module>
-        <module>spring-boot-crawler-example</module>
-        <module>spring-boot-shardingsphere-example</module>
-    </modules>
+    <subprojects>
+        <subproject>parent</subproject>
+        <subproject>spring-boot-ai-example</subproject>
+        <subproject>spring-boot-base-example</subproject>
+        <subproject>spring-boot-crawler-example</subproject>
+        <subproject>spring-boot-shardingsphere-example</subproject>
+    </subprojects>
 </project>
