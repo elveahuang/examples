@@ -1,0 +1,28 @@
+server:
+    port: 8181
+spring:
+    main:
+        web-application-type: servlet
+        allow-circular-references: true
+        allow-bean-definition-overriding: true
+    mvc:
+        view:
+            prefix: /WEB-INF/views/
+            suffix: .jsp
+    thymeleaf:
+        cache: false
+        prefix: /WEB-INF/templates/
+        suffix: .html
+        template-resolver-order: 1
+        view-names: html/*.html
+    data:
+        redis:
+            host: 127.0.0.1
+            port: 6379
+            password: redis
+            database: 1
+    session:
+        data:
+            redis:
+                namespace: app:session
+                repository-type: indexed

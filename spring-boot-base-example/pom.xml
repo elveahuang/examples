@@ -7,8 +7,8 @@
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <artifactId>spring-boot-base-example</artifactId>
-    <description>Spring Boot Example</description>
-    <packaging>war</packaging>
+    <description>Spring Boot Base Example</description>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>

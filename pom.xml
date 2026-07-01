@@ -12,6 +12,7 @@
         <subproject>parent</subproject>
         <subproject>spring-boot-ai-example</subproject>
         <subproject>spring-boot-base-example</subproject>
+        <subproject>spring-boot-web-example</subproject>
         <subproject>spring-boot-crawler-example</subproject>
         <subproject>spring-boot-shardingsphere-example</subproject>
     </subprojects>

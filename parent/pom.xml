@@ -45,16 +45,16 @@
         <spring-cloud.version>2025.1.2</spring-cloud.version>
         <spring-boot-admin.version>4.1.1</spring-boot-admin.version>
         <!-- ai -->
-        <openai.version>4.28.0</openai.version>
-        <dashscope.version>2.22.12</dashscope.version>
+        <openai.version>4.41.0</openai.version>
+        <dashscope.version>2.22.23</dashscope.version>
         <!-- 3rd party -->
-        <asm.version>9.9.1</asm.version>
-        <hutool.version>5.8.44</hutool.version>
-        <lombok.version>1.18.44</lombok.version>
-        <guava.version>33.5.0-jre</guava.version>
-        <sitemesh.version>3.2.2</sitemesh.version>
+        <asm.version>9.10.1</asm.version>
+        <hutool.version>5.8.46</hutool.version>
+        <lombok.version>1.18.46</lombok.version>
+        <guava.version>33.6.0-jre</guava.version>
+        <sitemesh.version>3.3.0-M1</sitemesh.version>
         <netty.version>4.2.15.Final</netty.version>
-        <playwright.version>1.58.0</playwright.version>
+        <playwright.version>1.60.0</playwright.version>
         <mybatis-plus.version>3.5.16</mybatis-plus.version>
         <shardingsphere.version>5.5.3</shardingsphere.version>
         <!-- maven -->
@@ -166,6 +166,11 @@
             <dependency><!-- sitemesh -->
                 <groupId>org.sitemesh</groupId>
                 <artifactId>sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>spring-boot-starter-sitemesh</artifactId>
                 <version>${sitemesh.version}</version>
             </dependency>
             <dependency><!-- playwright -->
