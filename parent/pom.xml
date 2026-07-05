@@ -12,6 +12,10 @@
 
     <!-- repository -->
     <repositories>
+        <repository><!-- tencent -->
+            <id>tencent-public</id>
+            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public</url>
+        </repository>
         <repository><!-- aliyun -->
             <id>aliyun-public</id>
             <url>https://maven.aliyun.com/repository/public</url>
@@ -22,6 +26,10 @@
         </repository>
     </repositories>
     <pluginRepositories>
+        <pluginRepository><!-- tencent -->
+            <id>tencent-public</id>
+            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public</url>
+        </pluginRepository>
         <pluginRepository><!-- aliyun -->
             <id>aliyun-public</id>
             <url>https://maven.aliyun.com/repository/public</url>
@@ -41,8 +49,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
         <spring-ai.version>2.0.0</spring-ai.version>
-        <spring-ai-extensions.version>2.0.0M1.1</spring-ai-extensions.version>
-        <spring-ai-alibaba.version>2.0.0M1.1</spring-ai-alibaba.version>
+        <spring-ai-extensions.version>2.0.0-M1.1</spring-ai-extensions.version>
+        <spring-ai-alibaba.version>2.0.0-M1.1</spring-ai-alibaba.version>
         <spring-boot.version>4.1.0</spring-boot.version>
         <spring-cloud.version>2025.1.2</spring-cloud.version>
         <spring-boot-admin.version>4.1.1</spring-boot-admin.version>
@@ -98,7 +106,7 @@
             </dependency>
             <dependency>
                 <groupId>com.alibaba.cloud.ai</groupId>
-                <artifactId>spring-ai-extensions-bom</artifactId>
+                <artifactId>spring-ai-alibaba-extensions-bom</artifactId>
                 <version>${spring-ai-extensions.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
