@@ -3,8 +3,14 @@
 <html>
 <head>
     <title>Page Login</title>
+    <layout:meta title="Page Login">
+    </layout:meta>
 </head>
 <body>
-Login Page 2 1
+<layout:header/>
+<div class="container text-center">
+    Login Page 2 1
+</div>
+<layout:footer/>
 </body>
 </html>

@@ -67,6 +67,11 @@
         <playwright.version>1.60.0</playwright.version>
         <mybatis-plus.version>3.5.16</mybatis-plus.version>
         <shardingsphere.version>5.5.3</shardingsphere.version>
+        <!-- webjars -->
+        <jquery.version>4.0.0</jquery.version>
+        <popper.version>2.11.7</popper.version>
+        <bootstrap.version>5.3.8</bootstrap.version>
+        <bootstrap-icons.version>1.13.1</bootstrap-icons.version>
         <!-- maven -->
         <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
@@ -201,6 +206,27 @@
                 <groupId>com.microsoft.playwright</groupId>
                 <artifactId>playwright</artifactId>
                 <version>${playwright.version}</version>
+            </dependency>
+            <!-- webjars -->
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>jquery</artifactId>
+                <version>${jquery.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>popper.js</artifactId>
+                <version>${popper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>bootstrap</artifactId>
+                <version>${bootstrap.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>bootstrap-icons</artifactId>
+                <version>${bootstrap-icons.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
