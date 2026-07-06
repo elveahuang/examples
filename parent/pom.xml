@@ -49,6 +49,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- spring -->
         <spring-ai.version>2.0.0</spring-ai.version>
+        <spring-ai-agent-utils.version>0.10.0</spring-ai-agent-utils.version>
+        <spring-ai-session.version>0.5.0</spring-ai-session.version>
+        <spring-ai-mcp-security.version>0.1.13</spring-ai-mcp-security.version>
         <spring-ai-extensions.version>2.0.0-M1.1</spring-ai-extensions.version>
         <spring-ai-alibaba.version>2.0.0-M1.1</spring-ai-alibaba.version>
         <spring-boot.version>4.1.0</spring-boot.version>
@@ -112,6 +115,20 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
+                <groupId>org.springaicommunity</groupId>
+                <artifactId>spring-ai-agent-utils-bom</artifactId>
+                <version>${spring-ai-agent-utils.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springaicommunity</groupId>
+                <artifactId>spring-ai-session-bom</artifactId>
+                <version>${spring-ai-session.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>com.alibaba.cloud.ai</groupId>
                 <artifactId>spring-ai-alibaba-extensions-bom</artifactId>
                 <version>${spring-ai-extensions.version}</version>
@@ -124,6 +141,16 @@
                 <version>${spring-ai-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springaicommunity</groupId>
+                <artifactId>mcp-server-security</artifactId>
+                <version>${spring-ai-mcp-security.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springaicommunity</groupId>
+                <artifactId>mcp-server-security-spring-boot</artifactId>
+                <version>${spring-ai-mcp-security.version}</version>
             </dependency>
             <dependency><!-- hutool -->
                 <groupId>cn.hutool</groupId>
@@ -157,9 +184,7 @@
                     </exclusion>
                     <exclusion>
                         <groupId>org.apache.shardingsphere</groupId>
-                        <artifactId
-                        >shardingsphere-test-fixture-database
-                        </artifactId>
+                        <artifactId>shardingsphere-test-fixture-database</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
