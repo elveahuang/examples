@@ -11,6 +11,11 @@ public class WebController {
         return "html/index.html";
     }
 
+    @RequestMapping("/web/login")
+    public String loginWeb() {
+        return "html/login.html";
+    }
+
     @RequestMapping({"/jsp/", "/jsp/index"})
     public String indexJsp() {
         return "index";

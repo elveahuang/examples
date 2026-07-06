@@ -12,7 +12,6 @@ spring:
     thymeleaf:
         cache: false
         prefix: /WEB-INF/templates/
-        suffix: .html
         template-resolver-order: 1
         view-names: html/*.html
     data:

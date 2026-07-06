@@ -36,11 +36,13 @@ public class WebSecurityConfig implements WebMvcConfigurer {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()
+                        .requestMatchers("/web/**").permitAll()
                         .requestMatchers("/jsp/login").permitAll()
+                        .requestMatchers("/web/login").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
-                        .loginPage("/jsp/login").permitAll())
+                        .loginPage("/web/login").permitAll())
                 .build();
     }
 
