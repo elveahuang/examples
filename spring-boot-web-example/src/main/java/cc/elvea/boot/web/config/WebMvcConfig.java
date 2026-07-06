@@ -1,6 +1,6 @@
 package cc.elvea.boot.web.config;
 
-import cc.elvea.boot.commons.Constants;
+import cc.elvea.boot.web.commons.Constants;
 import cc.elvea.boot.web.filter.ResourceFilter;
 import com.google.common.collect.Maps;
 import lombok.RequiredArgsConstructor;

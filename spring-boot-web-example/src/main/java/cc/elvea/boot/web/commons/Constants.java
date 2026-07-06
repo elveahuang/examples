@@ -1,4 +1,4 @@
-package cc.elvea.boot.commons;
+package cc.elvea.boot.web.commons;
 
 public class Constants {
 
