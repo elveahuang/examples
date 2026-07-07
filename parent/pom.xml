@@ -73,15 +73,21 @@
         <mapstruct.version>1.6.3</mapstruct.version>
         <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
         <!-- webjars -->
+        <layui.version>2.13.6</layui.version>
         <jquery.version>4.0.0</jquery.version>
         <popper.version>2.11.7</popper.version>
+        <lodash.version>4.18.1</lodash.version>
+        <marked.version>18.0.5</marked.version>
+        <i18next.version>26.0.10</i18next.version>
         <bootstrap.version>5.3.8</bootstrap.version>
+        <font-awesome.version>7.2.0</font-awesome.version>
         <bootstrap-icons.version>1.13.1</bootstrap-icons.version>
+        <i18next-http-backend.version>3.0.2</i18next-http-backend.version>
         <!-- maven -->
-        <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
         <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
-        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <maven-clean-plugin.version>3.5.0</maven-clean-plugin.version>
+        <lombok-maven-plugin.version>1.18.20.0</lombok-maven-plugin.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -244,6 +250,36 @@
                 <groupId>org.webjars</groupId>
                 <artifactId>bootstrap</artifactId>
                 <version>${bootstrap.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>layui</artifactId>
+                <version>${layui.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>font-awesome</artifactId>
+                <version>${font-awesome.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>marked</artifactId>
+                <version>${marked.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>i18next</artifactId>
+                <version>${i18next.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>i18next-http-backend</artifactId>
+                <version>${i18next-http-backend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.webjars.npm</groupId>
+                <artifactId>lodash</artifactId>
+                <version>${lodash.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.webjars.npm</groupId>

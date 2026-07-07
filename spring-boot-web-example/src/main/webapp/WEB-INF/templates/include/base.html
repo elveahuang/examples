@@ -2,18 +2,20 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <!-- @thymesVar id="applicationVersion" type="java.lang.String" -->
 <!-- @thymesVar id="applicationTitle" type="java.lang.String" -->
-<body>
 <th:block th:fragment="meta">
     <meta charset="utf-8"/>
     <title>App</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" th:href="@{/webjars/layui/2.13.6/css/layui.css(v=${applicationVersion})}"/>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.8/css/bootstrap.min.css(v=${applicationVersion})}"/>
 </th:block>
 <th:block th:fragment="js">
-    <script th:src="@{/webjars/jquery/4.0.0/jquery.min.js(v=${applicationVersion})}"></script>
-    <script th:src="@{/webjars/bootstrap/5.3.8/js/bootstrap.min.js(v=${applicationVersion})}"></script>
+    <script type="text/javascript" th:src="@{/webjars/lodash/4.18.1/lodash.min.js(v=${applicationVersion})}"></script>
+    <script type="text/javascript" th:src="@{/webjars/jquery/4.0.0/jquery.min.js(v=${applicationVersion})}"></script>
+    <script type="text/javascript" th:src="@{/webjars/layui/2.13.6/layui.js(v=${applicationVersion})}"></script>
+    <script type="text/javascript"
+            th:src="@{/webjars/bootstrap/5.3.8/js/bootstrap.min.js(v=${applicationVersion})}"></script>
 </th:block>
-</body>
 </html>

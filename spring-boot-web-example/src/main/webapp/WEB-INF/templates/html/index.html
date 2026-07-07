@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!-- @thymesVar id="applicationVersion" type="java.lang.String" -->
 <head>
     <title>Good Thymes Virtual Grocery</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -8,5 +9,6 @@
 <body>
 <p>Index Page</p>
 <th:block th:insert="~{/include/base :: js}"/>
+<script th:src="@{/static/js/pages/index.page.js(v=${applicationVersion})}"></script>
 </body>
 </html>
