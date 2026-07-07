@@ -2,18 +2,20 @@
 -- 建库 - 主库
 -- =====================================================================================================================
 
-DROP DATABASE IF EXISTS `master`;
+DROP DATABASE IF EXISTS ` master `;
 
 CREATE DATABASE IF NOT EXISTS `master`
-    DEFAULT CHARACTER SET `utf8mb4`
-    DEFAULT COLLATE `utf8mb4_0900_ai_ci`;
+    DEFAULT CHARACTER
+SET ` utf8mb4 `
+    DEFAULT COLLATE ` utf8mb4_0900_ai_ci `;
 
 -- =====================================================================================================================
 -- 建库 - 从库
 -- =====================================================================================================================
 
-DROP DATABASE IF EXISTS `slave`;
+DROP DATABASE IF EXISTS ` slave `;
 
 CREATE DATABASE IF NOT EXISTS `slave`
-    DEFAULT CHARACTER SET `utf8mb4`
-    DEFAULT COLLATE `utf8mb4_0900_ai_ci`;
+    DEFAULT CHARACTER
+SET ` utf8mb4 `
+    DEFAULT COLLATE ` utf8mb4_0900_ai_ci `;
