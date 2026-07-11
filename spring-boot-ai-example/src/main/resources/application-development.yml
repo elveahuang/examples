@@ -4,11 +4,42 @@
 spring:
     ai:
         model:
-            chat: deepseek
+            chat: openai
+            embedding:
+                text: openai
         deepseek:
             api-key: ${DEEPSEEK_API_KEY}
             chat:
                 model: deepseek-v4-flash
+        openai:
+            api-key: ${DASHSCOPE_API_KEY}
+            base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+            chat:
+                model: deepseek-v4-flash
+            embedding:
+                model: text-embedding-v4
+        vectorstore:
+            elasticsearch:
+                initialize-schema: true
+                index-name: spring-ai-vector-store-index
+                dimensions: 1536
+                similarity: cosine
+    # ------------------------------------------------------------------------------------------------------------------
+    # Redis
+    # ------------------------------------------------------------------------------------------------------------------
+    data:
+        redis:
+            host: 127.0.0.1
+            port: 6379
+            database: 0
+            password: redis
+    # ------------------------------------------------------------------------------------------------------------------
+    # Elasticsearch
+    # ------------------------------------------------------------------------------------------------------------------
+    elasticsearch:
+        uris: http://localhost:9200
+        password: elastic
+        username: elastic
 ### --------------------------------------------------------------------------------------------------------------------
 ### App Config
 ### --------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,9 @@
+{
+    "properties": [
+        {
+            "name": "spring.ai.vectorstore.type",
+            "type": "java.lang.String",
+            "description": "Spring AI Vector Databases Type."
+        }
+    ]
+}

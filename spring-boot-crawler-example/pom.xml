@@ -24,6 +24,5 @@
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
         </dependency>
-
     </dependencies>
 </project>
