@@ -29,15 +29,15 @@ public class DashScopeTests {
     public void baseTest() throws Exception {
         Generation gen = new Generation();
         Message userMsg = Message.builder()
-                .role(Role.USER.getValue())
-                .content("你是谁？")
-                .build();
+            .role(Role.USER.getValue())
+            .content("你是谁？")
+            .build();
         GenerationParam param = GenerationParam.builder()
-                .apiKey(this.properties.getDashScope().getApiKey())
-                .model(this.properties.getDashScope().getModel())
-                .messages(Collections.singletonList(userMsg))
-                .resultFormat(GenerationParam.ResultFormat.MESSAGE)
-                .build();
+            .apiKey(this.properties.getDashscope().getApiKey())
+            .model(this.properties.getDashscope().getModel())
+            .messages(Collections.singletonList(userMsg))
+            .resultFormat(GenerationParam.ResultFormat.MESSAGE)
+            .build();
         GenerationResult result = gen.call(param);
         System.out.println("思考过程：");
         System.out.println(result.getOutput().getChoices().getFirst().getMessage().getReasoningContent());

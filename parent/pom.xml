@@ -12,10 +12,6 @@
 
     <!-- repository -->
     <repositories>
-        <repository><!-- tencent -->
-            <id>tencent-public</id>
-            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public</url>
-        </repository>
         <repository><!-- aliyun -->
             <id>aliyun-public</id>
             <url>https://maven.aliyun.com/repository/public</url>
@@ -24,12 +20,18 @@
             <id>aliyun-spring</id>
             <url>https://maven.aliyun.com/repository/spring</url>
         </repository>
+        <repository><!-- embabel -->
+            <id>embabel</id>
+            <url>https://repo.embabel.com/artifactory/libs-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
     <pluginRepositories>
-        <pluginRepository><!-- tencent -->
-            <id>tencent-public</id>
-            <url>https://mirrors.cloud.tencent.com/nexus/repository/maven-public</url>
-        </pluginRepository>
         <pluginRepository><!-- aliyun -->
             <id>aliyun-public</id>
             <url>https://maven.aliyun.com/repository/public</url>
@@ -61,6 +63,7 @@
         <openai.version>4.41.0</openai.version>
         <dashscope.version>2.22.24</dashscope.version>
         <agent-scope.version>2.0.0</agent-scope.version>
+        <embabel-agent.version>1.5.0-SNAPSHOT</embabel-agent.version>
         <!-- 3rd party -->
         <asm.version>9.10.1</asm.version>
         <cosid.version>3.2.0</cosid.version>
@@ -70,6 +73,8 @@
         <playwright.version>1.60.0</playwright.version>
         <mybatis-plus.version>3.5.17</mybatis-plus.version>
         <shardingsphere.version>5.5.3</shardingsphere.version>
+        <!-- tools -->
+        <opentelemetry-semconv.version>1.42.0</opentelemetry-semconv.version>
         <!-- tools -->
         <lombok.version>1.18.46</lombok.version>
         <mapstruct.version>1.6.3</mapstruct.version>
@@ -120,6 +125,13 @@
                 <groupId>io.agentscope</groupId>
                 <artifactId>agentscope-bom</artifactId>
                 <version>${agent-scope.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency><!-- embabel-agent -->
+                <groupId>com.embabel.agent</groupId>
+                <artifactId>embabel-agent-dependencies</artifactId>
+                <version>${embabel-agent.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -256,6 +268,12 @@
                 <groupId>com.microsoft.playwright</groupId>
                 <artifactId>playwright</artifactId>
                 <version>${playwright.version}</version>
+            </dependency>
+            <!-- opentelemetry -->
+            <dependency>
+                <groupId>io.opentelemetry.semconv</groupId>
+                <artifactId>opentelemetry-semconv</artifactId>
+                <version>${opentelemetry-semconv.version}</version>
             </dependency>
             <!-- webjars -->
             <dependency>

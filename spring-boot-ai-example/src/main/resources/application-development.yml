@@ -2,6 +2,9 @@
 ### Spring Config
 ### --------------------------------------------------------------------------------------------------------------------
 spring:
+    # ------------------------------------------------------------------------------------------------------------------
+    # AI
+    # ------------------------------------------------------------------------------------------------------------------
     ai:
         model:
             chat: openai
@@ -19,11 +22,33 @@ spring:
             embedding:
                 model: text-embedding-v4
         vectorstore:
+            type: elasticsearch
             elasticsearch:
                 initialize-schema: true
                 index-name: spring-ai-vector-store-index
-                dimensions: 1536
+                dimensions: 1024
                 similarity: cosine
+                embedding-field-name: embedding
+        mcp:
+            server:
+                enabled: true
+                name: webapp-mcp-server
+                version: 1.0.0
+                type: sync
+                protocol: streamable
+                streamable-http:
+                    mcp-endpoint: /api/mcp
+                    keep-alive-interval: 30s
+    # ------------------------------------------------------------------------------------------------------------------
+    # Datasource
+    # ------------------------------------------------------------------------------------------------------------------
+    datasource:
+        name: master
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/examples?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
     # ------------------------------------------------------------------------------------------------------------------
     # Redis
     # ------------------------------------------------------------------------------------------------------------------
@@ -37,13 +62,28 @@ spring:
     # Elasticsearch
     # ------------------------------------------------------------------------------------------------------------------
     elasticsearch:
-        uris: http://localhost:9200
+        uris: http://175.178.92.42:9200
         password: elastic
         username: elastic
+### --------------------------------------------------------------------------------------------------------------------
+### Embabel Agent
+### --------------------------------------------------------------------------------------------------------------------
+embabel:
+    agent:
+        platform:
+            models:
+                deepseek:
+                    api-key: ${DEEPSEEK_API_KEY}
+                openai:
+                    api-key: ${DEEPSEEK_API_KEY}
+                    base-url: https://api.deepseek.com
 ### --------------------------------------------------------------------------------------------------------------------
 ### App Config
 ### --------------------------------------------------------------------------------------------------------------------
 app:
-    dash-scope:
+    dashscope:
+        api-key: ${DEEPSEEK_API_KEY}
+        model: deepseek-v4-flash
+    deepseek:
         api-key: ${DEEPSEEK_API_KEY}
         model: deepseek-v4-flash

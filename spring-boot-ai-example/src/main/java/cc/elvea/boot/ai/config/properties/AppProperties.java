@@ -14,16 +14,31 @@ public class AppProperties {
     public static final String PREFIX = "app";
 
     /**
-     * 阿里云
+     * DashScope
      */
     @NestedConfigurationProperty
-    private DashScopeConfig dashScope = DashScopeConfig.builder().build();
+    private DashScopeConfig dashscope = DashScopeConfig.builder().build();
+
+    /**
+     * DeepSeek
+     */
+    @NestedConfigurationProperty
+    private DeepSeekConfig deepseek = DeepSeekConfig.builder().build();
 
     @Data
     @Builder
     @NoArgsConstructor
     @AllArgsConstructor
     public static class DashScopeConfig {
+        private String apiKey;
+        private String model;
+    }
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class DeepSeekConfig {
         private String apiKey;
         private String model;
     }
