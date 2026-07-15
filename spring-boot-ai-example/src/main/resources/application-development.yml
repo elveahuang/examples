@@ -29,6 +29,10 @@ spring:
                 dimensions: 1024
                 similarity: cosine
                 embedding-field-name: embedding
+        session:
+            repository:
+                jdbc:
+                    initialize-schema: always
         mcp:
             server:
                 enabled: true

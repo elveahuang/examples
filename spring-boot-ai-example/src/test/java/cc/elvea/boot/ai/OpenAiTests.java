@@ -11,6 +11,7 @@ import org.springframework.ai.document.Document;
 import org.springframework.ai.embedding.EmbeddingResponse;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.openai.OpenAiEmbeddingModel;
+import org.springframework.ai.session.advisor.SessionMemoryAdvisor;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,12 +37,32 @@ public class OpenAiTests {
     @Autowired
     private VectorStore vectorStore;
 
+    @Autowired
+    private SessionMemoryAdvisor sessionMemoryAdvisor;
+
     @Test
     public void baseTest() {
         Assertions.assertNotNull(this.openAiChatModel);
 
         ChatResponse response = ChatClient.builder(this.openAiChatModel).build().prompt()
             .user("你好")
+            .call()
+            .chatResponse();
+        Assertions.assertNotNull(response);
+    }
+
+    @Test
+    public void sessionTest() {
+        Assertions.assertNotNull(this.openAiChatModel);
+
+        ChatClient chatClient = ChatClient.builder(this.openAiChatModel)
+            .defaultAdvisors(this.sessionMemoryAdvisor)
+            .build();
+
+        ChatResponse response = chatClient
+            .prompt()
+            .user("你好")
+            .advisors(a -> a.param(SessionMemoryAdvisor.SESSION_ID_CONTEXT_KEY, "session-abc"))
             .call()
             .chatResponse();
         Assertions.assertNotNull(response);
